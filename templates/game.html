@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="game-container">
+    <div class="game-info">
+        <h2>Chess Game</h2>
+        <div class="player-info">
+            <div class="player white">White: Player 1</div>
+            <div class="player black">Black: Player 2</div>
+        </div>
+    </div>
+    
+    <div class="chessboard">
+        <!-- Placeholder for the chess board -->
+        <p class="temporary-notice">Chess board will be implemented here</p>
+    </div>
+
+    <div class="game-controls">
+        <button class="btn btn-primary">New Game</button>
+        <button class="btn btn-secondary">Resign</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/chess.js') }}"></script>
+{% endblock %}

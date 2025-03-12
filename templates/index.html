@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>QuickChess</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="welcome-section">
     <h1>Welcome to QuickChess</h1>
-</body>
-</html>
+    <p>Play chess online with friends or practice your skills!</p>
+    <div class="action-buttons">
+        <a href="{{ url_for('game') }}" class="btn btn-primary">Start Playing</a>
+        <a href="{{ url_for('rules') }}" class="btn btn-secondary">Learn Rules</a>
+    </div>
+</div>
+{% endblock %}
