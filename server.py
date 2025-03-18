@@ -25,5 +25,21 @@ def rules():
 def page_not_found(e):
     return render_template('404.html', title="Page Not Found"), 404
 
+@app.route("/signup", methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        # Here you would normally process the form data
+        flash('Account created successfully! Please log in.')
+        return redirect(url_for('login'))
+    return render_template('signup.html', title='Sign Up')
+
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Here you would normally process the login
+        flash('Logged in successfully!')
+        return redirect(url_for('home'))
+    return render_template('login.html', title='Log In')
+
 if __name__ == "__main__":
     app.run(debug=True)
