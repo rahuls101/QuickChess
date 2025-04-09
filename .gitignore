@@ -1,0 +1,8 @@
+# byte-compiled / optimised / DLL files 
+
+__pycache__/
+*.py[cod]
+
+#SQLite database file
+users.db
+
